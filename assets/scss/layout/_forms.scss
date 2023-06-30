@@ -74,6 +74,116 @@ section{
             -webkit-mask: url(/assets/images/5-cover.svg) no-repeat center/contain;
         }
     }
+
+    &.cream1-1{
+        background-image: url(/assets/images/1-1.png);
+        & >div{
+            mask: url(/assets/images/1-1-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/1-1-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream1-2{
+        background-image: url(/assets/images/1-2.png);
+        & >div{
+            mask: url(/assets/images/1-2-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/1-2-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream1-3{
+        background-image: url(/assets/images/1-3.png);
+        & >div{
+            mask: url(/assets/images/1-3-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/1-3-cover.svg) no-repeat center/contain;
+        }
+    }
+
+    &.cream2-1{
+        background-image: url(/assets/images/2-1.png);
+        & >div{
+            mask: url(/assets/images/2-1-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/2-1-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream2-2{
+        background-image: url(/assets/images/2-2.png);
+        & >div{
+            mask: url(/assets/images/2-2-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/2-2-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream2-3{
+        background-image: url(/assets/images/2-3.png);
+        & >div{
+            mask: url(/assets/images/2-3-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/2-3-cover.svg) no-repeat center/contain;
+        }
+    }
+
+    &.cream3-1{
+        background-image: url(/assets/images/3-1.png);
+        & >div{
+            mask: url(/assets/images/3-1-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/3-1-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream3-2{
+        background-image: url(/assets/images/3-2.png);
+        & >div{
+            mask: url(/assets/images/3-2-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/3-2-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream3-3{
+        background-image: url(/assets/images/3-3.png);
+        & >div{
+            mask: url(/assets/images/3-3-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/3-3-cover.svg) no-repeat center/contain;
+        }
+    }
+
+    &.cream4-1{
+        background-image: url(/assets/images/4-1.png);
+        & >div{
+            mask: url(/assets/images/4-1-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/4-1-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream4-2{
+        background-image: url(/assets/images/4-2.png);
+        & >div{
+            mask: url(/assets/images/4-2-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/4-2-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream4-3{
+        background-image: url(/assets/images/4-3.png);
+        & >div{
+            mask: url(/assets/images/4-3-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/4-3-cover.svg) no-repeat center/contain;
+        }
+    }
+
+    &.cream5-1{
+        background-image: url(/assets/images/5-1.png);
+        & >div{
+            mask: url(/assets/images/5-1-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/5-1-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream5-2{
+        background-image: url(/assets/images/5-2.png);
+        & >div{
+            mask: url(/assets/images/5-2-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/5-2-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cream5-3{
+        background-image: url(/assets/images/5-3.png);
+        & >div{
+            mask: url(/assets/images/5-3-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/5-3-cover.svg) no-repeat center/contain;
+        }
+    }
 }
 
 .select_array{
@@ -158,7 +268,17 @@ section{
                 background-position: center;
 
                 >input{
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100%;
+                    border: none;
                     display: none;
+                }
+
+                @include mobile {
+                    input{
+                        display: block;
+                    }
                 }
             }
         }
