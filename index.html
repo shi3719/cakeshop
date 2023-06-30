@@ -81,7 +81,7 @@
                         </div>
                     </li>
                     <li class="swiper-slide">
-                        <div class="overlay_img cream">
+                        <div class="overlay_img cream1 cream_shape">
                             <div class="overlay_color cream_color"></div>
                         </div>
                         <div class="overlay_img body_shape_selected">
@@ -89,7 +89,7 @@
                         </div>
                     </li>
                     <li class="swiper-slide">
-                        <div class="overlay_img cream">
+                        <div class="overlay_img cream2 cream_shape">
                             <div class="overlay_color cream_color"></div>
                         </div>
                         <div class="overlay_img body_shape_selected">
@@ -97,7 +97,7 @@
                         </div>
                     </li>
                     <li class="swiper-slide">
-                        <div class="overlay_img cream">
+                        <div class="overlay_img cream3 cream_shape">
                             <div class="overlay_color cream_color"></div>
                         </div>
                         <div class="overlay_img body_shape_selected">
@@ -153,10 +153,12 @@
 
         inputBtn.addEventListener('click', () => {
             inputBodyColor.click();
+            inputBodyColor.style.display = 'block';
         })
         inputBodyColor.addEventListener('change', () => {
             const colorValue = inputBodyColor.value;
             printColor(colorValue);
+            inputBodyColor.style.display = 'none';
         })
 
         const colorChips = document.querySelectorAll('.color_chip');
@@ -196,6 +198,9 @@
             spaceBetween: 20,
             loop:true,
         });
+
+        const creamShape = document.querySelectorAll('.cream_shape');
+
     </script>
 </body>
 </html>
