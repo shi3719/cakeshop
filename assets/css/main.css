@@ -420,11 +420,10 @@ section {
   height: 24px;
   border-radius: 100%;
   border: none;
-  display: none;
 }
-@media (max-width: 719px) {
-  .select_color_wrap ul li.plus input {
-    display: block;
+@media (min-width: 720px) {
+  .select_color_wrap ul li.plus > input {
+    opacity: 0;
   }
 }
 

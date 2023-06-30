@@ -272,12 +272,11 @@ section{
                     height: 24px;
                     border-radius: 100%;
                     border: none;
-                    display: none;
                 }
-
-                @include mobile {
-                    input{
-                        display: block;
+                
+                @include tablet{
+                    >input{
+                        opacity: 0;
                     }
                 }
             }

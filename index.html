@@ -156,13 +156,11 @@
         const inputBtn = document.querySelector('.plus_body');
         const inputBodyColor = document.querySelector('#body_color');
         inputBtn.addEventListener('click', () => {
-            inputBodyColor.style.display = 'block';
             inputBodyColor.click();
         })
         inputBodyColor.addEventListener('change', () => {
             const colorValue = inputBodyColor.value;
             printColor(colorValue);
-            inputBodyColor.style.display = 'none';
         })
 
         const colorChips = document.querySelectorAll('.color_chip');
@@ -223,13 +221,11 @@
         const inputCreamBtn = document.querySelector('.plus_cream');
         const inputCreamColor = document.querySelector('#cream_color');
         inputCreamBtn.addEventListener('click', () => {
-            inputCreamColor.style.display = 'block';
             inputCreamColor.click();
         })
         inputCreamColor.addEventListener('change', () => {
             const colorValue = inputCreamColor.value;
             printCreamColor(colorValue);
-            inputCreamColor.style.display = 'none';
         })
 
         const colorCreamChips = document.querySelectorAll('.color_chip_cream');
