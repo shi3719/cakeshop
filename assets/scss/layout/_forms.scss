@@ -1,0 +1,159 @@
+section{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/assets/images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.section_cover{
+    width: 100%;
+    height: 100%;
+    @include flex_center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: auto;
+}
+
+.overlay_img{
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    position: relative;
+
+    & >div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        background-blend-mode: overlay;
+        content: '';
+    }
+
+    &.cake1{
+        background-image: url(/assets/images/1.png);
+        & >div{
+            mask: url(/assets/images/1-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/1-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cake2{
+        background-image: url(/assets/images/2.png);
+        & >div{
+            mask: url(/assets/images/2-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/2-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cake3{
+        background-image: url(/assets/images/3.png);
+        & >div{
+            mask: url(/assets/images/3-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/3-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cake4{
+        background-image: url(/assets/images/4.png);
+        & >div{
+            mask: url(/assets/images/4-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/4-cover.svg) no-repeat center/contain;
+        }
+    }
+    &.cake5{
+        background-image: url(/assets/images/5.png);
+        & >div{
+            mask: url(/assets/images/5-cover.svg) no-repeat center/contain;
+            -webkit-mask: url(/assets/images/5-cover.svg) no-repeat center/contain;
+        }
+    }
+}
+
+.select_array{
+    width: 200px;
+    ul{
+        li{
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 60px;
+            @include transition02;
+            opacity: 0.5;
+
+            &.swiper-slide-active{
+                opacity: 1;
+                border: 3px solid $white;
+            }
+        }
+    }
+}
+
+.select_color_wrap{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        justify-content: space-between;
+
+        @include mobile{
+            width: 300px;
+        }
+
+        li{
+            width: 24px;
+            height: 24px;
+            margin: 10px;
+            border-radius: 24px;
+
+            &:nth-child(1){
+                background-color: white;
+                border: 1px solid #E2E2E2;
+            }
+            &:nth-child(2){
+                background-color: #FC3489;
+            }
+            &:nth-child(3){
+                background-color: #FFC9E0;
+            }
+            &:nth-child(4){
+                background-color: #FCDC34;
+            }
+            &:nth-child(5){
+                background-color: #FFA471;
+            }
+            &:nth-child(6){
+                background-color: #BBF4B6;
+            }
+            &:nth-child(7){
+                background-color: #A5DEFF;
+            }
+            &:nth-child(8){
+                background-color: #94C0F3;
+            }
+            &:nth-child(9){
+                background-color: #E09FF6;
+            }
+
+            &.plus{
+                background-image: url(/assets/images/plus.svg);
+                background-size: cover;
+                background-position: center;
+
+                >input{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.button{
+    width: 327px;
+    height: 62px;
+    border-radius: 60px;
+    @include flex_center;
+    background-color: $pink;
+    color: white;
+    @include fontBasic30;
+}

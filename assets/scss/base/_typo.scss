@@ -2,24 +2,38 @@
     font-family:'Cafe24Simplehae', cursive;
     font-size: 16px;
     line-height: 100%;
-    font-weight: 800;
+    font-weight: 500;
     color: black;
-    letter-spacing: 1px;
 }
 
 .fontBasic14{
     @include fontBasic14;
 }
 
-@mixin fontBasic12 {
+@mixin fontBasic21 {
     font-family:'Cafe24Simplehae', cursive;
-    font-size: 14px;
-    line-height: 100%;
-    font-weight: 800;
+    font-size: 21px;
+    line-height: 135%;
+    font-weight: 500;
     color: white;
-    letter-spacing: 1.5px;
 }
 
-.fontBasic12{
-    @include fontBasic12;
+.fontBasic21{
+    @include fontBasic21;
+}
+
+@mixin fontBasic30 {
+    font-family:'Cafe24Simplehae', cursive;
+    font-size: 30px;
+    line-height: 135%;
+    font-weight: 500;
+    color: white;
+}
+
+.fontBasic30{
+    @include fontBasic30;
+}
+
+.center{
+    text-align: center;
 }
