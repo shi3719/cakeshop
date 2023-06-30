@@ -184,15 +184,66 @@ section{
             -webkit-mask: url(/assets/images/5-3-cover.svg) no-repeat center/contain;
         }
     }
+
+    &.deco1-1{
+        background-image: url(/assets/images/1-d1.png);
+    }
+    &.deco1-2{
+        background-image: url(/assets/images/1-d2.png);
+    }
+    &.deco1-3{
+        background-image: url(/assets/images/1-d3.png);
+    }
+
+    &.deco2-1{
+        background-image: url(/assets/images/2-d1.png);
+    }
+    &.deco2-2{
+        background-image: url(/assets/images/2-d2.png);
+    }
+    &.deco2-3{
+        background-image: url(/assets/images/2-d3.png);
+    }
+
+    &.deco3-1{
+        background-image: url(/assets/images/3-d1.png);
+    }
+    &.deco3-2{
+        background-image: url(/assets/images/3-d2.png);
+    }
+    &.deco3-3{
+        background-image: url(/assets/images/3-d3.png);
+    }
+
+    &.deco4-1{
+        background-image: url(/assets/images/4-d1.png);
+    }
+    &.deco4-2{
+        background-image: url(/assets/images/4-d2.png);
+    }
+    &.deco4-3{
+        background-image: url(/assets/images/4-d3.png);
+    }
+
+    &.deco5-1{
+        background-image: url(/assets/images/5-d1.png);
+    }
+    &.deco5-2{
+        background-image: url(/assets/images/5-d2.png);
+    }
+    &.deco5-3{
+        background-image: url(/assets/images/5-d3.png);
+    }
 }
 
 .select_array{
-    width: 200px;
+    width: 194px;
     ul{
         li{
             width: 100%;
             padding-bottom: 100%;
             background-color: rgba(255, 255, 255, 0.9);
+            border: 3px solid transparent;
             border-radius: 60px;
             @include transition02;
             opacity: 0.5;
@@ -208,6 +259,12 @@ section{
                 z-index: 100;
                 &:nth-child(2){
                     z-index: 90;
+                }
+                &:nth-child(3){
+                    z-index: 80;
+                }
+                &:nth-child(4){
+                    z-index: 70;
                 }
             }
         }
@@ -273,7 +330,7 @@ section{
                     border-radius: 100%;
                     border: none;
                 }
-                
+
                 @include tablet{
                     >input{
                         opacity: 0;
