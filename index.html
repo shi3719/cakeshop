@@ -20,33 +20,33 @@
 </head>
 <body> 
     <section>
-        <div class="section_cover">
+        <div class="section_cover section1">
             <p class="fontBasic30 center">형태와 컬러를<br>선택해주세요</p>
-            <div class="select_array swiper-container">
+            <div class="select_array swiper-container body_select_array">
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
                         <div class="overlay_img cake1">
-                            <div class="overlay_color"></div>
+                            <div class="overlay_body_color body_color"></div>
                         </div>
                     </li>
                     <li class="swiper-slide">
                         <div class="overlay_img cake2">
-                            <div class="overlay_color"></div>
+                            <div class="overlay_body_color"></div>
                         </div>
                     </li>
                     <li class="swiper-slide">
                         <div class="overlay_img cake3">
-                            <div class="overlay_color"></div>
+                            <div class="overlay_body_color"></div>
                         </div>
                     </li>
                     <li class="swiper-slide">
                         <div class="overlay_img cake4">
-                            <div class="overlay_color"></div>
+                            <div class="overlay_body_color"></div>
                         </div>
                     </li>
                     <li class="swiper-slide">
                         <div class="overlay_img cake5">
-                            <div class="overlay_color"></div>
+                            <div class="overlay_body_color"></div>
                         </div>
                     </li>
                 </ul>
@@ -67,7 +67,62 @@
                     </li>
                 </ul>
             </div>
-            <div class="button">next</div>
+            <div class="button body_select_btn">next</div>
+        </div>
+        <div class="section_cover section2">
+            <p class="fontBasic30 center">생크림 형태와 컬러를<br>선택해주세요</p>
+            <div class="select_array swiper-container cream_select_array">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="overlay_img cream0">
+                        </div>
+                        <div class="overlay_img body_shape_selected">
+                            <div class="overlay_body_color"></div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="overlay_img cream">
+                            <div class="overlay_color cream_color"></div>
+                        </div>
+                        <div class="overlay_img body_shape_selected">
+                            <div class="overlay_body_color"></div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="overlay_img cream">
+                            <div class="overlay_color cream_color"></div>
+                        </div>
+                        <div class="overlay_img body_shape_selected">
+                            <div class="overlay_body_color"></div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="overlay_img cream">
+                            <div class="overlay_color cream_color"></div>
+                        </div>
+                        <div class="overlay_img body_shape_selected">
+                            <div class="overlay_body_color"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="select_color_wrap">
+                <ul>
+                    <li class="color_chip ffffff"></li>
+                    <li class="color_chip FC3489"></li>
+                    <li class="color_chip FFC9E0"></li>
+                    <li class="color_chip FCDC34"></li>
+                    <li class="color_chip FFA471"></li>
+                    <li class="color_chip BBF4B6"></li>
+                    <li class="color_chip A5DEFF"></li>
+                    <li class="color_chip 94C0F3"></li>
+                    <li class="color_chip E09FF6"></li>
+                    <li class="plus">
+                        <input type="color" name="body_color" id="body_color">
+                    </li>
+                </ul>
+            </div>
+            <div class="button body_select_btn">next</div>
         </div>
     </section>
 
@@ -75,21 +130,21 @@
     <script src="/assets/js/index.js"></script>
 
     <script>
-        const selectArraySwiper = new Swiper('.select_array', {
+        const bodySelectArraySwiper = new Swiper('.body_select_array', {
             slidesPerView: 1,
             spaceBetween: 20,
             loop:true,
         });
 
-        const overlayColors = document.querySelectorAll('.overlay_color');
+        const overlayBodyColors = document.querySelectorAll('.overlay_body_color');
 
         const printColor = (color) => {
             const r = parseInt(color.substr(1,2), 16)
             const g = parseInt(color.substr(3,2), 16)
             const b = parseInt(color.substr(5,2), 16)
 
-            overlayColors.forEach((overlayColor) => {
-                overlayColor.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.7)`;
+            overlayBodyColors.forEach((overlayBodyColor) => {
+                overlayBodyColor.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.7)`;
             })
         }
         const inputBtn = document.querySelector('.plus');
@@ -110,6 +165,36 @@
                 printColor(colorChipBg);
             })
         })
+
+        // 선택된 케이크
+        const cakeBodySelecteds = document.querySelectorAll('.body_shape_selected');
+        const showSelectedbody = (bodyFormValue) => {
+            cakeBodySelecteds.forEach((cakeBodySelected) => {
+                console.dir(cakeBodySelected)
+                cakeBodySelected.classList.add(`cake${bodyFormValue}`)
+            })
+        }
+
+        const body_select_btn = document.querySelector('.body_select_btn');
+        const body_color = document.querySelector('.body_color');
+
+        const section1 = document.querySelector('.section1');
+        const section2 = document.querySelector('.section2');
+
+        body_select_btn.addEventListener('click', () => {
+            const bodyFormValue = bodySelectArraySwiper.activeIndex + 1;
+            section1.style.display = "none";
+            section2.style.display = "flex";
+            showSelectedbody(bodyFormValue);
+            const bodyColorvalue = body_color.style.backgroundColor;
+
+        })
+
+        const creamSelectArraySwiper = new Swiper('.cream_select_array', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop:true,
+        });
     </script>
 </body>
 </html>
